@@ -125,3 +125,30 @@
     transform: translateY(-100%); /* Posunie nahor mimo obrazovky */
   }
 }
+
+.slide-show .slick-slide {
+  transition: all 0.4s ease-in-out;
+}
+
+.vlastnosti {
+  opacity: 20%;
+  transition: all 0.4s ease-in-out;
+}
+
+.slick-center .vlastnosti {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+
+.slick-center .vlastnosti .bowl-nadpis {
+  font-size: larger;
+}
+
+.slide-show .slick-slide {
+  transition: all 0.4s ease-in-out;
+}
+
+.slick-center{
+  transform: scale(1.2);
+  transition: all 0.4s ease-in-out;
+}
