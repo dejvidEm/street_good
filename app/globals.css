@@ -71,3 +71,52 @@
 .wave .shape-fill {
     fill:#f5f5f4;;
 }
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  transition: opacity 0.75s, visibility 0.4s, top 0.75s; /* Pridaná animácia pre 'top' */
+  overflow: hidden; /* Skryje časti animácie mimo obrazovky */
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+  top: -100%; /* Presunie loader mimo obrazovky pri skrytí */
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #777777;
+  border-top-color: #ec4899;
+  border-radius: 50%;
+  animation: loading 3s ease infinite, moveUp 0.75s 2.25s; /* Zmena dĺžky animácie a animačného oneskorenia */
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%); /* Posunie nahor mimo obrazovky */
+  }
+}

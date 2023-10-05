@@ -1,9 +1,40 @@
-import Image from "next/image";
+"use client"
+import React, { useState, useEffect } from 'react';
 
 
 export default function Intro() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const loader = document.querySelector(".loader");
+
+    const handleTransitionEnd = () => {
+      if (loader && document.body.contains(loader)) {
+        
+      }
+    };
+
+    if (loader instanceof HTMLElement) {
+      loader.classList.add("loader--hidden");
+      loader.addEventListener("transitionend", handleTransitionEnd);
+    }
+
+    // Simulujeme načítanie po 3 sekundách
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+      if (loader instanceof HTMLElement) {
+        loader.removeEventListener("transitionend", handleTransitionEnd);
+      }
+    };
+  }, []);
+
     return (
         <section className="text-center bg-pink-400 w-full h-screen">
+            <div className={`loader${isLoading ? '' : ' loader--hidden'}`}></div>
             <div className="h-screen translate-y-1/3 z-10">
                 <h1 className="sm:text-6xl text-4xl font-semibold text-white">STREET GOOD</h1>
                 <h2 className="text-white italic font-light text-2xl p-5">Time for the smoothie</h2>

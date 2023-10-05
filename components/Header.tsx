@@ -15,7 +15,7 @@ export default function Header() {
       };
 
     return (
-        <header className="fixed left-1/2 sm:-ml-5 -translate-x-1/2 container mx-auto flex items-center px-6 py-2 h-20">
+        <header className="fixed left-1/2 sm:-ml-5 -translate-x-1/2 container mx-auto flex items-center px-6 py-2 h-20 z-[100]">
             <h1 className="font-bold text-2xl">StreetGood</h1>
             <div className="grow hidden sm:inline">
                 <div className="text-white flex items-center justify-center gap-10">
