@@ -4,7 +4,7 @@ export default function Main() {
     return (
         <section className="w-full h-full sm:my-36 max-w-[90%] sm:max-w-[800px] mx-auto sm:ml-[40vw] relative">
             <h1 className="font-bold text-center sm:text-left text-xl sm:text-3xl text-pink-950 p-5 sm:pt-0 pt-10 mb-4">Zdravé a chutné: Základ pre život plný vitamínov</h1>
-            <img src="/img-main2.svg" alt="main-img" className="hidden sm:absolute sm:-left-[90%] sm:-top-48 mxl-20 sm:mx-0"/>
+            <img src="/img-main2.svg" alt="main-img" className="hidden sm:inline sm:absolute sm:-left-[90%] sm:-top-48 mxl-20 sm:mx-0"/>
             <div className="flex flex-col gap-6">
                 <div className="flex">
                     <img src="/icon3.png" alt="icon_health" className="sm:w-24 sm:h-24 w-16 h-16 my-auto"/>

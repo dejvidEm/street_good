@@ -103,6 +103,11 @@
   animation: loading 3s ease infinite, moveUp 0.75s 3s; /* Zmena dĺžky animácie a animačného oneskorenia */
 }
 
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
 @keyframes loading {
   from {
     transform: rotate(0turn);
