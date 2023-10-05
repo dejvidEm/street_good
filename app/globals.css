@@ -100,7 +100,7 @@
   border: 15px solid #777777;
   border-top-color: #ec4899;
   border-radius: 50%;
-  animation: loading 3s ease infinite, moveUp 0.75s 2.25s; /* Zmena dĺžky animácie a animačného oneskorenia */
+  animation: loading 3s ease infinite, moveUp 0.75s 3s; /* Zmena dĺžky animácie a animačného oneskorenia */
 }
 
 @keyframes loading {
