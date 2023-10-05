@@ -1,9 +1,12 @@
 import Header from "@/components/Header";
+import Intro from "@/components/Intro";
+import Main from "@/components/Main";
 
 export default function Home() {
   return (
-    <main className="h-[3000px]">
-      <Header/>
+    <main className="">
+      <Intro/>
+      <Main/>
     </main>
   )
 }
