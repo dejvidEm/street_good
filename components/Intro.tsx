@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Intro() {
     return (
-        <section className="text-center bg-pink-400 w-full h-screen">
+        <section className="text-center bg-pink-400 w-full h-auto">
             <div className="h-screen translate-y-1/3 z-10">
                 <h1 className="sm:text-6xl text-4xl font-semibold text-white">STREET GOOD</h1>
                 <h2 className="text-white italic font-light text-2xl p-5">Time for the smoothie</h2>
