@@ -7,6 +7,9 @@ import { RefObject } from "react";
 import { HiArrowSmallLeft, HiArrowSmallRight } from "react-icons/hi2";
 import { SiRaspberrypi } from "react-icons/si";
 
+// importing slider item component to prevent repetitive code
+import SliderItem from "./SliderItem";
+
 
 export default function Slideshow() {
   const customeSlider = useRef();
@@ -22,114 +25,33 @@ export default function Slideshow() {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 700,
     slidesToShow: 3,
     slidesToScroll: 1,
     swipeToSlide: true,
     initialSlide: 2,
     centerMode: true,
+    adaptiveHeight: true,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    focusOnSelect: true
   };
   
   return (
     <section className="w-full">
       <h1 className="font-bold text-4xl text-pink-950 text-center mt-10">Naše najobľúbenejšie smoothies</h1>
       <h2 className="text-xl text-center p-3 mb-10">Ochutnaj ich všetky</h2>
-      <Slider ref={customeSlider} {...settings} className="w-full">
-        <div className="text-center">
-          <img src="/bowl1.png" alt="" className=""/>
-          <h2 className="bowl-nadpis font-bold text-xl text-blue-950">Nadpis ku bowle 1</h2>
-          <div className="vlastnosti flex flex-row justify-center pt-6 pb-14 gap-20">
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-          </div>
-        </div>
-        <div className="text-center">
-          <img src="/bowl2.png" alt="" className=""/>
-          <h2 className="bowl-nadpis font-bold text-xl text-blue-950">Nadpis ku bowle 2</h2>
-          <div className="vlastnosti flex flex-row justify-center pt-6 pb-14 gap-20">
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-          </div>
-        </div>
-        <div className="text-center">
-        <img src="/bowl3.png" alt="" className=""/>
-          <h2 className="bowl-nadpis font-bold text-xl text-blue-950">Nadpis ku bowle 3</h2>
-          <div className="vlastnosti flex flex-row justify-center pt-6 pb-14 gap-20">
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-          </div>
-        </div>
-        <div className="text-center">
-        <img src="/bowl4.png" alt="" className=""/>
-          <h2 className="bowl-nadpis font-bold text-xl text-blue-950">Nadpis ku bowle 4</h2>
-          <div className="vlastnosti flex flex-row justify-center pt-6 pb-14 gap-20">
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-          </div>
-        </div>
-        <div className="text-center">
-          <img src="/bowl5.png" alt="" className=""/>
-          <h2 className="bowl-nadpis font-bold text-xl text-blue-950">Nadpis ku bowle 5</h2>
-          <div className="vlastnosti flex flex-row justify-center pt-6 pb-14 gap-20">
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <p>Raspberries</p>
-              <SiRaspberrypi size={30}/>
-            </div>
-          </div>
-        </div>
-    </Slider>
-    <div className="flex justify-center items-center p-4 mt-10 gap-20">
-      <button type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" onClick={gotoPrev}><HiArrowSmallLeft onClick={gotoPrev}/></button>
-      <button type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" onClick={gotoNext}><HiArrowSmallRight onClick={gotoNext}/></button>
-    </div>
+      <Slider ref={customeSlider} {...settings} className="w-full h-auto">
+      <SliderItem imageSrc="/bowl1.png" icon3={<SiRaspberrypi size={30}/>} icon2={<SiRaspberrypi size={30}/>} icon={<SiRaspberrypi size={30}/>} iconName="Nutsss" iconName2="Banana" iconName3="Mango"><span className="text-pink-950">Dragon Bowl</span></SliderItem>
+      <SliderItem imageSrc="/bowl2.png" icon3={<SiRaspberrypi size={30}/>} icon2={<SiRaspberrypi size={30}/>} icon={<SiRaspberrypi size={30}/>} iconName="Nuts" iconName2="Banana" iconName3="Mango"><span className="text-pink-950">Raspberry</span> Bowl</SliderItem>
+      <SliderItem imageSrc="/bowl3.png" icon3={<SiRaspberrypi size={30}/>} icon2={<SiRaspberrypi size={30}/>} icon={<SiRaspberrypi size={30}/>} iconName="Nuts" iconName2="Banana" iconName3="Mango"><span className="text-pink-950">Ocean</span> Bowl</SliderItem>
+      <SliderItem imageSrc="/bowl4.png" icon3={<SiRaspberrypi size={30}/>} icon2={<SiRaspberrypi size={30}/>} icon={<SiRaspberrypi size={30}/>} iconName="Nuts" iconName2="Banana" iconName3="Mango"><span className="text-pink-950">Mango</span> Bowl</SliderItem>
+      <SliderItem imageSrc="/bowl5.png" icon3={<SiRaspberrypi size={30}/>} icon2={<SiRaspberrypi size={30}/>} icon={<SiRaspberrypi size={30}/>} iconName="Nuts" iconName2="Banana" iconName3="Mango"><span className="text-pink-950">Strawberry</span> Bowl</SliderItem>
+      </Slider>
+      <div className="flex justify-center items-center p-4 mt-10 gap-20">
+        <button type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" onClick={gotoPrev}><HiArrowSmallLeft onClick={gotoPrev}/></button>
+        <button type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" onClick={gotoNext}><HiArrowSmallRight onClick={gotoNext}/></button>
+      </div>
     </section>
   );
 }
