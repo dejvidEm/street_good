@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden!important;
 }
 
 .menu-btn {
