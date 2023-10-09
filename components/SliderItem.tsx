@@ -15,8 +15,8 @@ export default function SliderItem({children, imageSrc, icon, icon2, icon3, icon
   return (
     <div className="text-center">
           <img src={imageSrc} alt="bowl" className="opacity-90"/>
-          <h2 className="bowl-nadpis font-bold text-xl text-gray-950">{children}</h2>
-          <div className="vlastnosti flex flex-row justify-center pt-6 pb-14 gap-20">
+          <h2 className="bowl-nadpis font-bold text-md sm:text-xl text-gray-950">{children}</h2>
+          <div className="vlastnosti flex flex-row justify-center pt-2 sm:pt-5 mb-10 sm:mb-20 sm:gap-20 gap-8 sm:text-base text-xs">
             <div className="flex flex-col items-center gap-2">
               <p>{iconName}</p>
               {icon}

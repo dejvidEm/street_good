@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Intro from "@/components/Intro";
 import Main from "@/components/Main";
+import MenuSection from "@/components/Menu";
 import Slider from "@/components/Slideshow";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Intro/>
       <Main/>
       <Slider/>
+      <MenuSection/> 
     </main>
   )
 }

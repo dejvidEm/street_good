@@ -34,15 +34,16 @@ export default function Slideshow() {
     adaptiveHeight: true,
     autoplay: false,
     autoplaySpeed: 3000,
+    centerPadding: 0,
     focusOnSelect: true
   };
   
   return (
-    <section className="w-full">
-      <h1 className="font-bold text-4xl text-pink-950 text-center mt-10">Naše najobľúbenejšie smoothies</h1>
-      <h2 className="text-xl text-center p-3 mb-10">Ochutnaj ich všetky</h2>
+    <section className="w-full mb-28">
+      <h1 className="font-bold text-xl sm:text-4xl text-pink-950 text-center mt-10">Naše najobľúbenejšie smoothies</h1>
+      <h2 className="text-lg sm:text-xl text-center p-1 sm:p-3 mb-10">Ochutnaj ich všetky</h2>
       <Slider ref={customeSlider} {...settings} className="w-full h-auto">
-      <SliderItem imageSrc="/bowl1.png" icon3={<SiRaspberrypi size={30}/>} icon2={<SiRaspberrypi size={30}/>} icon={<SiRaspberrypi size={30}/>} iconName="Nutsss" iconName2="Banana" iconName3="Mango"><span className="text-pink-950">Dragon Bowl</span></SliderItem>
+      <SliderItem imageSrc="/bowl1.png" icon3={<SiRaspberrypi size={30} className="ikonka"/>} icon2={<SiRaspberrypi size={30} className="ikonka"/>} icon={<SiRaspberrypi size={30} className="ikonka"/>} iconName="Nutsss" iconName2="Banana" iconName3="Mango"><span className="text-pink-950">Dragon Bowl</span></SliderItem>
       <SliderItem imageSrc="/bowl2.png" icon3={<SiRaspberrypi size={30}/>} icon2={<SiRaspberrypi size={30}/>} icon={<SiRaspberrypi size={30}/>} iconName="Nuts" iconName2="Banana" iconName3="Mango"><span className="text-pink-950">Raspberry</span> Bowl</SliderItem>
       <SliderItem imageSrc="/bowl3.png" icon3={<SiRaspberrypi size={30}/>} icon2={<SiRaspberrypi size={30}/>} icon={<SiRaspberrypi size={30}/>} iconName="Nuts" iconName2="Banana" iconName3="Mango"><span className="text-pink-950">Ocean</span> Bowl</SliderItem>
       <SliderItem imageSrc="/bowl4.png" icon3={<SiRaspberrypi size={30}/>} icon2={<SiRaspberrypi size={30}/>} icon={<SiRaspberrypi size={30}/>} iconName="Nuts" iconName2="Banana" iconName3="Mango"><span className="text-pink-950">Mango</span> Bowl</SliderItem>
