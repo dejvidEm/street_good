@@ -1,3 +1,4 @@
+import Gallery from "@/components/Gallery";
 import Header from "@/components/Header";
 import Intro from "@/components/Intro";
 import Main from "@/components/Main";
@@ -11,6 +12,7 @@ export default function Home() {
       <Main/>
       <Slider/>
       <MenuSection/> 
+      <Gallery/>
     </main>
   )
 }
