@@ -56,27 +56,6 @@ html, body {
     transform: rotate(-45deg) translate(35px, 35px);
   }
 
-  .wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.wave svg {
-    position: relative;
-    display: block;
-    width: calc(148% + 1.3px);
-    height: 138px;
-}
-
-.wave .shape-fill {
-    fill:#f5f5f4;;
-}
-
 .loader {
   position: fixed;
   top: 0;
@@ -186,3 +165,23 @@ html, body {
   opacity: 1!important;
   transition: all 0.4s ease-in-out;
 }
+
+.custom-shape-divider-top-1697716365 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1697716365 svg {
+  position: absolute;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 89px;
+}
+
+.custom-shape-divider-top-1697716365 .shape-fill {
+  fill: #CEDD5F;
+}
+
