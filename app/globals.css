@@ -166,6 +166,10 @@ html, body {
   transition: all 0.4s ease-in-out;
 }
 
+/*
+wave na menu
+*/
+
 .custom-shape-divider-top-1697716365 {
   top: 0;
   left: 0;
@@ -183,5 +187,30 @@ html, body {
 
 .custom-shape-divider-top-1697716365 .shape-fill {
   fill: #CEDD5F;
+}
+
+/*
+wave na footeri
+*/
+
+.custom-shape-divider-bottom-1698086668 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1698086668 svg {
+    position: relative;
+    display: block;
+    width: calc(118% + 1.3px);
+    height: 58px;
+}
+
+.custom-shape-divider-bottom-1698086668 .shape-fill {
+    fill: #BFDBFE;
 }
 

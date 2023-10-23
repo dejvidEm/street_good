@@ -1,7 +1,7 @@
 
  export default function MenuSection() {
     return (
-        <section className="w-full mb-44 bg-[#cedd5f]">
+        <section id="menu" className="w-full mb-44 bg-[#cedd5f]">
             <h1 className="font-bold text-3xl sm:text-4xl text-gray-950 text-center pt-10">Naše Menu</h1>
             <h2 className="text-lg sm:text-xl text-center p-1 sm:p-3 mb-10">Každý si príde na to svoje..</h2>
             <div className="max-w-[1024px] mx-auto">

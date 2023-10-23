@@ -30,6 +30,9 @@ export default function Intro() {
                 <h1 className="sm:text-6xl text-4xl font-semibold text-white">STREET GOOD</h1>
                 <h2 className="text-white italic font-light text-2xl p-5">Time for the smoothie</h2>
             </div>
+            <div className=''>
+              <p className='text-stone-200'>Sme tu pre Vás od <span className='font-bold text-xl'>Stredy</span> do <span className='font-bold text-xl'>Nedele</span></p>
+            </div>
         </section>
     )
 }
